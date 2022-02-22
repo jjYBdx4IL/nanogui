@@ -130,7 +130,9 @@ PYBIND11_MODULE(nanogui, m) {
             handle->refresh = refresh;
 
                 handle->thread = std::thread([]{
-                    auto window = nanogui::sample::create_window(1600, 900, "NanoGUI Python", true, false);
+                    int w = 1600;
+                    int h = 900;
+                    auto window = nanogui::sample::create_window(w, h, "NanoGUI Python", true, false);
                     nanogui::sample::create_context();
 
                     Screen screen({ 1600, 900 }, "NanoGUI Python", false);

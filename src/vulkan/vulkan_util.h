@@ -173,6 +173,10 @@ static VkInstance createVkInstance(bool enable_debug_layer) {
     };
     inst_info.enabledLayerCount = sizeof(instance_validation_layers) / sizeof(instance_validation_layers[0]);
     inst_info.ppEnabledLayerNames = instance_validation_layers;
+
+    // validation layer with recent SDK not working
+    inst_info.enabledLayerCount = 0;
+    inst_info.ppEnabledLayerNames = nullptr;
   }
   VkInstance inst;
   VkResult res;

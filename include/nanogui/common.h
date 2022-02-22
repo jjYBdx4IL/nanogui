@@ -797,7 +797,7 @@ class Color;
 namespace sample
 {
   using WindowHandle = void*;
-  WindowHandle NANOGUI_EXPORT create_window(int& w, int& h, const std::string& caption, bool resizable, bool fullscreen, bool header);
+  WindowHandle NANOGUI_EXPORT create_window(int& w, int& h, const std::string& caption, bool resizable, bool fullscreen, bool header = false);
   Vector2i NANOGUI_EXPORT get_window_pos(WindowHandle w);
   Vector2i NANOGUI_EXPORT get_cursor_pos();
   void NANOGUI_EXPORT set_window_topmost(WindowHandle w, bool top, bool always);
